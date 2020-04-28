@@ -44,11 +44,11 @@ def find_all_paths():
 		path = q[0] #get first list item to path variable
 		q.pop(0) #delete first element from list
 		#print("ilk eleman çıkartıldı",q,"çıkarılan:",path)
-		last = path[-1] # get last sub-list
+		last = path[-1] # get last item from list
 		#print(">>last:",last)
 		
 		#print("!>> checking ending point: ", last,"endPosition:",endPosition)
-		#if the last element of a list then add that list to finalpath list
+		#if the last element of the list equals to end position then add that list to finalpath list
 		if(last == endPosition):
 			finalpath.append(path)
 		
@@ -92,7 +92,7 @@ for points in finalpath:
 		print("########################################################")
 
 
-#searching routes for the smallest distance
+#searching route for the smallest distance
 minIndex = 0
 minDist = routes[0]
 for i in range(len(routes)):
